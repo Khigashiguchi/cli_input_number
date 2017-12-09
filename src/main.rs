@@ -3,16 +3,18 @@ use std::io::Write;
 
 fn main() {
     println!("Insert your first number: ");
-    io::stdout().flush();
+    let _ = io::stdout().flush();
 
-    let mut a = String::new();
-    io::stdin().read_line(&mut a);
-    let mut a: i32 = a.trim().parse().unwrap();
+    let mut first_input = String::new();
+    let _ = io::stdin().read_line(&mut first_input);
+    let first_input_num: i32 = first_input.trim().parse().unwrap();
+    println!("Your number is {}", first_input_num);
 
     print!("Insert your second number: ");
-    io::stdout().flush();
+    let _ = io::stdout().flush();
 
-    let mut b = String::new();
-    io::stdin().read_line(&mut b);
-    let mut b: i32 = b.trim().parse().unwrap();
+    let mut second_input = String::new();
+    let _ = io::stdin().read_line(&mut second_input);
+    let second_input_num: i32 = second_input.trim().parse().unwrap();
+    println!("Your number is {}", second_input_num);
 }
